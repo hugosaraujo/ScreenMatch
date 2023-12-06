@@ -3,7 +3,7 @@ public class Filme {
     int anoDeLancamento;
     int duracaoEmMinutos;
     double avaliacao;
-    double totalDeAvaliacao;
+    int totalDeAvaliacao;
 
     void exibeFichaTecnica() {
         String fichaTecnica = """
@@ -12,5 +12,14 @@ public class Filme {
                 Duração em Minutos: %d min
                 """.formatted(nome, anoDeLancamento, duracaoEmMinutos);
         System.out.println(fichaTecnica);
+    }
+
+    void avalia(int nota) {
+        avaliacao += nota;
+        totalDeAvaliacao++;
+    }
+
+    double pegaMedia(){
+        return avaliacao / totalDeAvaliacao;
     }
 }

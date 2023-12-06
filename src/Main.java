@@ -8,5 +8,12 @@ public class Main {
         creed3.duracaoEmMinutos = 161;
 
         creed3.exibeFichaTecnica();
+
+        creed3.avalia(6);
+        creed3.avalia(8);
+        creed3.avalia(10);
+
+        double media = creed3.pegaMedia();
+        System.out.printf("%.1f".formatted(media));
     }
 }
