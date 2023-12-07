@@ -1,11 +1,13 @@
-public class Filme {
-    String titulo;
-    int anoDeLancamento;
-    int duracaoEmMinutos;
-    double avaliacao;
-    int totalDeAvaliacoes;
+package screenMatch.modelos;
 
-    void exibeFichaTecnica(){
+public class Filme {
+    public String titulo;
+    public int anoDeLancamento;
+    public int duracaoEmMinutos;
+    private double avaliacao;
+    private int totalDeAvaliacoes;
+
+    public void exibeFichaTecnica(){
         String fichaTecnica = """
                 Titulo do Filme: %s
                 Ano de Lançamento: %d
@@ -14,12 +16,12 @@ public class Filme {
                 """.formatted(titulo, anoDeLancamento, duracaoEmMinutos, totalDeAvaliacoes);
         System.out.println(fichaTecnica);
     }
-    void avalia(int nota){
+    public void avalia(int nota){
         avaliacao += nota;
         totalDeAvaliacoes++;
     }
 
-    double pegaMedia() {
+    public double pegaMedia() {
         return avaliacao / totalDeAvaliacoes;
     }
 }
