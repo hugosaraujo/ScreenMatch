@@ -1,11 +1,23 @@
 package screenMatch.modelos;
 
 public class Filme {
-    public String titulo;
-    public int anoDeLancamento;
-    public int duracaoEmMinutos;
+    private String titulo;
+    private int anoDeLancamento;
+    private int duracaoEmMinutos;
     private double avaliacao;
     private int totalDeAvaliacoes;
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
 
     public void exibeFichaTecnica(){
         String fichaTecnica = """
