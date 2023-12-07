@@ -3,7 +3,7 @@ public class Main {
         System.out.println("Bem vindo ao Screen Match");
 
         Filme creed3 = new Filme();
-        creed3.nome = "Creed III";
+        creed3.titulo = "Creed III";
         creed3.anoDeLancamento = 2023;
         creed3.duracaoEmMinutos = 161;
 

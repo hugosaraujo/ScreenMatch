@@ -1,25 +1,25 @@
 public class Filme {
-    String nome;
+    String titulo;
     int anoDeLancamento;
     int duracaoEmMinutos;
     double avaliacao;
-    int totalDeAvaliacao;
+    int totalDeAvaliacoes;
 
-    void exibeFichaTecnica() {
+    void exibeFichaTecnica(){
         String fichaTecnica = """
                 Titulo do Filme: %s
                 Ano de Lançamento: %d
-                Duração em Minutos: %d min
-                """.formatted(nome, anoDeLancamento, duracaoEmMinutos);
+                Duracao em Minutos: %d
+                Total de Avaliações: %d
+                """.formatted(titulo, anoDeLancamento, duracaoEmMinutos, totalDeAvaliacoes);
         System.out.println(fichaTecnica);
     }
-
-    void avalia(int nota) {
+    void avalia(int nota){
         avaliacao += nota;
-        totalDeAvaliacao++;
+        totalDeAvaliacoes++;
     }
 
-    double pegaMedia(){
-        return avaliacao / totalDeAvaliacao;
+    double pegaMedia() {
+        return avaliacao / totalDeAvaliacoes;
     }
 }
