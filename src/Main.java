@@ -1,21 +1,18 @@
-import screenMatch.modelos.Filme;
-
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Bem vindo ao Screen Match");
+        //criar menu para interagir com as classes
+        //utilizar os métodos específicos para cada opção de menu;
 
-        Filme creed3 = new Filme();
-        creed3.setTitulo("Creed III");
-        creed3.setAnoDeLancamento(2023);
-        creed3.setDuracaoEmMinutos(161);
+        Filme tmv = new Filme();
 
-        creed3.exibeFichaTecnica();
+        tmv.titulo = "Todos menos você";
+        tmv.anoDeLancamento = 2023;
+        tmv.duracaoEmMinutos = 103;
 
-        creed3.avalia(6);
-        creed3.avalia(8);
-        creed3.avalia(10);
-
-        double media = creed3.pegaMedia();
-        System.out.printf("%.1f".formatted(media));
+        tmv.avalia(5);
+        tmv.avalia(10);
+        tmv.avalia(6);
+        System.out.println(tmv.exibeMedia());
+        //tmv.exibeFichaTecnica();
     }
 }
