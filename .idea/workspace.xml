@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9387510e-3440-440d-93f3-a7a58025e0fc" name="Changes" comment="Criação de classe filme e métodos de avaliação, exibir ficha técnica e mostrar média">
+    <list default="true" id="9387510e-3440-440d-93f3-a7a58025e0fc" name="Changes" comment="Criação de pacotes e atribuindo modificadores de acesso para os atributos e métodos.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenmatch/modelos/Filme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screenmatch/modelos/Filme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenmatch/modelos/Filme.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +102,7 @@
       <workItem from="1708034563126" duration="3169000" />
       <workItem from="1708112899968" duration="2264000" />
       <workItem from="1708286570435" duration="4175000" />
-      <workItem from="1708370018809" duration="140000" />
+      <workItem from="1708370018809" duration="2687000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do gerenciador de filmes ScreenMatch">
       <option name="closed" value="true" />
@@ -160,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708290681104</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Criação de pacotes e atribuindo modificadores de acesso para os atributos e métodos.">
+      <option name="closed" value="true" />
+      <created>1708370222666</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708370222666</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,6 +182,7 @@
     <MESSAGE value="Criação de pacote para as classes de modelos" />
     <MESSAGE value="Encapsulando campos da classe" />
     <MESSAGE value="Criação de classe filme e métodos de avaliação, exibir ficha técnica e mostrar média" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação de classe filme e métodos de avaliação, exibir ficha técnica e mostrar média" />
+    <MESSAGE value="Criação de pacotes e atribuindo modificadores de acesso para os atributos e métodos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação de pacotes e atribuindo modificadores de acesso para os atributos e métodos." />
   </component>
 </project>

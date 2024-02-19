@@ -7,14 +7,16 @@ public class Main {
 
         Filme tmv = new Filme();
 
-        tmv.titulo = "Todos menos você";
-        tmv.anoDeLancamento = 2023;
-        tmv.duracaoEmMinutos = 103;
+        tmv.setTitulo("Todos menos você");
+        tmv.setAnoDeLancamento(2023);
+        tmv.setDuracaoEmMinutos(103);
 
         tmv.avalia(5);
         tmv.avalia(10);
         tmv.avalia(6);
+
+        System.out.println(tmv.getQuantidadeNotas());
         System.out.println(tmv.exibeMedia());
-        //tmv.exibeFichaTecnica();
+        System.out.println(tmv.exibeFichaTecnica());
     }
 }
