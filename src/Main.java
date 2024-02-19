@@ -1,3 +1,5 @@
+import screenmatch.modelos.Filme;
+
 public class Main {
     public static void main(String[] args) {
         //criar menu para interagir com as classes

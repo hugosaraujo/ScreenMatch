@@ -1,10 +1,12 @@
+package screenmatch.modelos;
+
 public class Filme {
-    String titulo;
-    int anoDeLancamento;
-    boolean incluidoNoPlano;
-    double notas;
-    double quantidadeNotas;
-    int duracaoEmMinutos;
+    public String titulo;
+    public int anoDeLancamento;
+    public boolean incluidoNoPlano;
+    private double notas;
+    private double quantidadeNotas;
+    public int duracaoEmMinutos;
 
     public void exibeFichaTecnica(){
         String fichaTecnica = """
@@ -15,12 +17,12 @@ public class Filme {
         System.out.println(fichaTecnica);
     }
 
-    void avalia(double nota){
+    public void avalia(double nota){
         notas += nota;
         quantidadeNotas++;
     }
 
-    double exibeMedia() {
+    public double exibeMedia() {
         return notas / quantidadeNotas;
     }
 }
