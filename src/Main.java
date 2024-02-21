@@ -1,22 +1,31 @@
-import screenmatch.modelos.Filme;
+import screenmatch.models.Film;
+import screenmatch.models.Show;
+
 
 public class Main {
     public static void main(String[] args) {
         //criar menu para interagir com as classes
         //utilizar os métodos específicos para cada opção de menu;
 
-        Filme tmv = new Filme();
+        Film aoby = new Film();
 
-        tmv.setTitulo("Todos menos você");
-        tmv.setAnoDeLancamento(2023);
-        tmv.setDuracaoEmMinutos(103);
+        aoby.setTitle("Anyone but you");
+        aoby.setReleaseYear(2023);
+        aoby.setRunningTimeinMinutes(103);
 
-        tmv.avalia(5);
-        tmv.avalia(10);
-        tmv.avalia(6);
+        aoby.rate(5);
+        aoby.rate(10);
+        aoby.rate(6);
 
-        System.out.println(tmv.getQuantidadeNotas());
-        System.out.println(tmv.exibeMedia());
-        System.out.println(tmv.exibeFichaTecnica());
+        System.out.println(aoby.getTotalRating());
+        System.out.println(aoby.showAverage());
+        System.out.println(aoby.showOverview());
+
+        Show gilmoreGirls = new Show();
+        gilmoreGirls.setTitle("Gilmore Girls");
+        gilmoreGirls.setReleaseYear(2000);
+        gilmoreGirls.setEpisodeRunningTime(45);
+
+        System.out.println(gilmoreGirls.showOverview());
     }
 }
