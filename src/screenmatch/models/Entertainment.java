@@ -1,8 +1,8 @@
 package screenmatch.models;
 
 public class Entertainment {
-    private String title;
-    private int releaseYear;
+    protected String title;
+    protected int releaseYear;
     private boolean plainIncluded;
     private double rates;
     private int totalRating;
@@ -25,21 +25,17 @@ public class Entertainment {
         return rates / totalRating;
     }
 
-    public String getTitle() {
-        return title;
-    }
-
     public void setTitle(String title){
         this.title = title;
     }
 
-    public int getReleaseYear() {
-        return releaseYear;
-    }
     public void setReleaseYear(int releaseYear){
         this.releaseYear = releaseYear;
     }
 
+    public int getRunningTimeInMinutes(){
+        return runningTimeinMinutes;
+    }
     public void setRunningTimeinMinutes(int runningTimeinMinutes){
         this.runningTimeinMinutes = runningTimeinMinutes;
     }

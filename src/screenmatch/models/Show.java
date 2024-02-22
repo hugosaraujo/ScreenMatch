@@ -9,7 +9,7 @@ public class Show extends Entertainment{
                 Título: %s
                 Duração do Episódio: %d minutos
                 Ano de Lançamento: %d
-                """.formatted(super.getTitle(), episodeRunningTime, super.getReleaseYear());
+                """.formatted(title, episodeRunningTime, releaseYear);
     }
 
     public void setEpisodeRunningTime(int episodeRunningTime) {
