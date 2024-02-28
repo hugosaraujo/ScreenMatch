@@ -1,6 +1,6 @@
 package screenmatch.models;
 
-public class Entertainment {
+public class Entertainment{
     protected String title;
     protected int releaseYear;
     private boolean plainIncluded;

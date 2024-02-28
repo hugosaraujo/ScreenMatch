@@ -1,6 +1,8 @@
 package screenmatch.models;
 
-public class Film extends Entertainment{
+import screenmatch.runningtimecalculator.Rating;
+
+public class Film extends Entertainment implements Rating {
     private String director;
 
     public String getDirector() {
@@ -9,5 +11,10 @@ public class Film extends Entertainment{
 
     public void setDirector(String director) {
         this.director = director;
+    }
+
+    @Override
+    public int getRatingNote() {
+        return (int)showAverage() / 2;
     }
 }
