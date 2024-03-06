@@ -17,4 +17,11 @@ public class Film extends Entertainment implements Rating {
     public int getRatingNote() {
         return (int)showAverage() / 2;
     }
+
+    @Override
+    public String toString() {
+        return """
+                Título: %s(%d)
+                """.formatted(title, releaseYear);
+    }
 }

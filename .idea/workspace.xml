@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9387510e-3440-440d-93f3-a7a58025e0fc" name="Changes" comment="Adição de atributos específicos para as classes Film e Show">
-      <change afterPath="$PROJECT_DIR$/src/screenmatch/models/Episode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screenmatch/runningtimecalculator/Rating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screenmatch/runningtimecalculator/RecommentationFilter.java" afterDir="false" />
+    <list default="true" id="9387510e-3440-440d-93f3-a7a58025e0fc" name="Changes" comment="Criação da interface rating e criação de filtro para notas dos filmes, séries e episódios">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screenmatch/models/Entertainment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenmatch/models/Entertainment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screenmatch/models/Film.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenmatch/models/Film.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +109,8 @@
       <workItem from="1708543707674" duration="2894000" />
       <workItem from="1708621957577" duration="5789000" />
       <workItem from="1709055503420" duration="4193000" />
-      <workItem from="1709142293374" duration="2557000" />
+      <workItem from="1709142293374" duration="2883000" />
+      <workItem from="1709750342511" duration="801000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do gerenciador de filmes ScreenMatch">
       <option name="closed" value="true" />
@@ -211,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708627919031</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Criação da interface rating e criação de filtro para notas dos filmes, séries e episódios">
+      <option name="closed" value="true" />
+      <created>1709145107900</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1709145107900</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +235,7 @@
     <MESSAGE value="Tradução de termos para uma melhor síntaxe do aplicativo e criação das classes Entertainment e Show" />
     <MESSAGE value="Criação da classe calculator, para a realização de cálculos para um maratona de filmes ou séries." />
     <MESSAGE value="Adição de atributos específicos para as classes Film e Show" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adição de atributos específicos para as classes Film e Show" />
+    <MESSAGE value="Criação da interface rating e criação de filtro para notas dos filmes, séries e episódios" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criação da interface rating e criação de filtro para notas dos filmes, séries e episódios" />
   </component>
 </project>

@@ -4,6 +4,8 @@ import screenmatch.models.Show;
 import screenmatch.runningtimecalculator.Calculator;
 import screenmatch.runningtimecalculator.RecommentationFilter;
 
+import java.util.ArrayList;
+
 
 public class Main {
     public static void main(String[] args) {
@@ -53,5 +55,29 @@ public class Main {
 
         RecommentationFilter filter = new RecommentationFilter();
         filter.toFilt(aoby);
+
+        Film americanFiction = new Film();
+        americanFiction.setTitle("American Fiction");
+        americanFiction.setReleaseYear(2024);
+        americanFiction.setDirector("Cord Jefferson");
+
+        var martian = new Film();
+        martian.setTitle("The Martian");
+        martian.setReleaseYear(2015);
+        martian.setDirector("Drew Goddard");
+
+        Film tbah = new Film();
+        tbah.setTitle("The Boy and the Heron");
+        tbah.setDirector("Hayao Miyazaki");
+        tbah.setReleaseYear(2023);
+
+        ArrayList<Film> films = new ArrayList();
+        films.add(aoby);
+        films.add(americanFiction);
+        films.add(martian);
+        films.add(tbah);
+        System.out.println(films.toString());
+        System.out.println(americanFiction.toString());
+        System.out.println(films.size());
     }
 }
