@@ -6,13 +6,15 @@ public class Show extends Entertainment{
     private boolean isCurrently;
     private int episodeRunningTime;
 
+    public Show(String title) {
+        super(title);
+    }
+
     @Override
-    public String showOverview() {
+    public String toString() {
         return """
                 Título: %s
-                Duração do Episódio: %d minutos
-                Ano de Lançamento: %d
-                """.formatted(title, episodeRunningTime, releaseYear);
+                """.formatted(title);
     }
 
     public void setEpisodeRunningTime(int episodeRunningTime) {

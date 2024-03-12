@@ -1,3 +1,5 @@
+package screenmatch.main;
+
 import screenmatch.models.Episode;
 import screenmatch.models.Film;
 import screenmatch.models.Show;
@@ -9,15 +11,15 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        //criar menu para interagir com as classes
-        //utilizar os métodos específicos para cada opção de menu;
-        //criar um método para calcular o tempo necessário para maratonar uma série
-            //mostrar por horas ou minutos
+        /*
+            1. Criar menu para interagir com o usuário
+            2. Utilizar métodos específicos para cada opção de menu;
+            3. criar um método para calcular o tempo necessário para maratonar uma série;
+                3.1 mostrar por horas ou menus;
+         */
 
-        Film aoby = new Film();
+        Film aoby = new Film("Anyone but you", 2023, "Will Gluck");
 
-        aoby.setTitle("Anyone but you");
-        aoby.setReleaseYear(2023);
         aoby.setRunningTimeinMinutes(103);
 
         aoby.rate(5);
@@ -28,14 +30,12 @@ public class Main {
         System.out.println(aoby.showAverage());
         System.out.println(aoby.showOverview());
 
-        Show gilmoreGirls = new Show();
-        gilmoreGirls.setTitle("Gilmore Girls");
+        Show gilmoreGirls = new Show("Gilmore Girls");
         gilmoreGirls.setReleaseYear(2000);
         gilmoreGirls.setEpisodeRunningTime(45);
         gilmoreGirls.setRunningTimeinMinutes(((45 * 21) * 7));
 
-        Show theBear = new Show();
-        gilmoreGirls.setTitle("The Bear");
+        Show theBear = new Show("The Bear");
         theBear.setReleaseYear(2022);
         theBear.setEpisodeRunningTime(30);
 
@@ -47,29 +47,20 @@ public class Main {
         paraMaratonar.add(aoby);
         System.out.println(paraMaratonar.getTotalRunningTime());
 
-        Episode favorite = new Episode();
-        favorite.setEpisodeNumber(0);
-        favorite.setMainTitle("Hands");
-        favorite.setShowName(theBear);
-        favorite.setTotalVisualization(400);
+        Episode favourite = new Episode();
+        favourite.setEpisodeNumber(0);
+        favourite.setMainTitle("Hands");
+        favourite.setShowName(theBear);
+        favourite.setTotalVisualization(400);
 
         RecommentationFilter filter = new RecommentationFilter();
         filter.toFilt(aoby);
 
-        Film americanFiction = new Film();
-        americanFiction.setTitle("American Fiction");
-        americanFiction.setReleaseYear(2024);
-        americanFiction.setDirector("Cord Jefferson");
+        Film americanFiction = new Film("American Fiction", 2024, "Cord Jefferson");
 
-        var martian = new Film();
-        martian.setTitle("The Martian");
-        martian.setReleaseYear(2015);
-        martian.setDirector("Drew Goddard");
+        var martian = new Film("The Martian", 2015, "Drew Goddard");
 
-        Film tbah = new Film();
-        tbah.setTitle("The Boy and the Heron");
-        tbah.setDirector("Hayao Miyazaki");
-        tbah.setReleaseYear(2023);
+        Film tbah = new Film("The Boy and the Heron", 2023, "Hayao Miyazaki");
 
         ArrayList<Film> films = new ArrayList();
         films.add(aoby);

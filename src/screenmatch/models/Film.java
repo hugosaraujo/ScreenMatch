@@ -5,6 +5,12 @@ import screenmatch.runningtimecalculator.Rating;
 public class Film extends Entertainment implements Rating {
     private String director;
 
+    public Film(String title, int year, String director) {
+        super(title);
+        releaseYear = year;
+        this.director = director;
+    }
+
     public String getDirector() {
         return director;
     }
