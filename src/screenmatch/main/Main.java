@@ -63,13 +63,13 @@ public class Main {
 
         Film tbah = new Film("The Boy and the Heron", 2023, "Hayao Miyazaki");
 
-        ArrayList<Film> films = new ArrayList();
+        ArrayList<Film> films = new ArrayList<>();
         films.add(aoby);
         films.add(americanFiction);
         films.add(martian);
         films.add(tbah);
-        System.out.println(films.toString());
-        System.out.println(americanFiction.toString());
+        System.out.println(films);
+        System.out.println(americanFiction);
         System.out.println(films.size());
 
         Collections.sort(films);
