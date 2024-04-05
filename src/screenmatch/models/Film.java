@@ -28,6 +28,6 @@ public class Film extends Entertainment implements Rating {
     public String toString() {
         return """
                 Título: %s(%d)
-                """.formatted(title, releaseYear);
+                """.formatted(getTitle(), getReleaseYear());
     }
 }

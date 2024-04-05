@@ -9,15 +9,14 @@ public class Show extends Entertainment{
     public Show(String title) {
         super(title);
     }
+    public void setEpisodeRunningTime(int episodeRunningTime) {
+        this.episodeRunningTime = episodeRunningTime;
+    }
 
     @Override
     public String toString() {
         return """
-                Título: %s
-                """.formatted(title);
-    }
-
-    public void setEpisodeRunningTime(int episodeRunningTime) {
-        this.episodeRunningTime = episodeRunningTime;
+               Série: %s (%d)
+               """.formatted(super.getTitle(), releaseYear);
     }
 }

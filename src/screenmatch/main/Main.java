@@ -7,6 +7,7 @@ import screenmatch.runningtimecalculator.Calculator;
 import screenmatch.runningtimecalculator.RecommentationFilter;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 
 public class Main {
@@ -70,5 +71,8 @@ public class Main {
         System.out.println(films.toString());
         System.out.println(americanFiction.toString());
         System.out.println(films.size());
+
+        Collections.sort(films);
+        System.out.println(films);
     }
 }

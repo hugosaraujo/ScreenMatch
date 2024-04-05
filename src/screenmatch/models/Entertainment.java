@@ -1,9 +1,8 @@
 package screenmatch.models;
 
-public class Entertainment{
+public class Entertainment implements Comparable<Entertainment>{
 
-
-    protected String title;
+    private String title;
     protected int releaseYear;
     private boolean plainIncluded;
     private double rates;
@@ -17,10 +16,17 @@ public class Entertainment{
 
     public String showOverview(){
         return """
-                Título: %s 
+                Título: %s
                 Duração: %d minutos
                 Ano de Lançamento: %d
                 """.formatted(title, runningTimeinMinutes, releaseYear);
+    }
+    public String getTitle(){
+        return title;
+    }
+
+    public int getReleaseYear(){
+        return releaseYear;
     }
 
     public void rate(double rate){
@@ -45,5 +51,10 @@ public class Entertainment{
 
     public int getTotalRating(){
         return totalRating;
+    }
+
+    @Override
+    public int compareTo(Entertainment otherTitle) {
+        return this.getTitle().compareTo(otherTitle.getTitle());
     }
 }
