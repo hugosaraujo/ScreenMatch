@@ -21,7 +21,7 @@ public class Main {
 
         Film aoby = new Film("Anyone but you", 2023, "Will Gluck");
 
-        aoby.setRunningTimeinMinutes(103);
+        aoby.setRuntimeInMinutes(103);
 
         aoby.rate(5);
         aoby.rate(10);
@@ -29,18 +29,18 @@ public class Main {
 
         System.out.println(aoby.getTotalRating());
         System.out.println(aoby.showAverage());
-        System.out.println(aoby.showOverview());
+        System.out.println(aoby);
 
         Show gilmoreGirls = new Show("Gilmore Girls");
         gilmoreGirls.setReleaseYear(2000);
         gilmoreGirls.setEpisodeRunningTime(45);
-        gilmoreGirls.setRunningTimeinMinutes(((45 * 21) * 7));
+        gilmoreGirls.setRuntimeInMinutes(((45 * 21) * 7));
 
         Show theBear = new Show("The Bear");
         theBear.setReleaseYear(2022);
         theBear.setEpisodeRunningTime(30);
 
-        System.out.println(gilmoreGirls.showOverview());
+        System.out.println(gilmoreGirls);
 
         Calculator paraMaratonar = new Calculator();
         //paraMaratonar.add(gilmoreGirls);

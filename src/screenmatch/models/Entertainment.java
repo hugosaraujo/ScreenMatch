@@ -1,26 +1,39 @@
 package screenmatch.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Entertainment implements Comparable<Entertainment>{
 
+    @SerializedName("Title")
     private String title;
+    @SerializedName("Year")
     protected int releaseYear;
     private boolean plainIncluded;
     private double rates;
     private int totalRating;
-    private int runningTimeinMinutes;
+    @SerializedName("Runtime")
+    private int runtimeInMinutes;
 
 
     public Entertainment(String title) {
         this.title = title;
     }
 
-    public String showOverview(){
+    public Entertainment(OmdbTitle omdbTitle) {
+        this.title = omdbTitle.title();
+        this.releaseYear = Integer.valueOf(omdbTitle.year());
+        this.runtimeInMinutes = Integer.valueOf(omdbTitle.runtime().substring(0,3));
+    }
+
+    @Override
+    public String toString() {
         return """
                 Título: %s
                 Duração: %d minutos
                 Ano de Lançamento: %d
-                """.formatted(title, runningTimeinMinutes, releaseYear);
+                """.formatted(title, runtimeInMinutes, releaseYear);
     }
+
     public String getTitle(){
         return title;
     }
@@ -43,10 +56,10 @@ public class Entertainment implements Comparable<Entertainment>{
     }
 
     public int getRunningTimeInMinutes(){
-        return runningTimeinMinutes;
+        return runtimeInMinutes;
     }
-    public void setRunningTimeinMinutes(int runningTimeinMinutes){
-        this.runningTimeinMinutes = runningTimeinMinutes;
+    public void setRuntimeInMinutes(int runtimeInMinutes){
+        this.runtimeInMinutes = runtimeInMinutes;
     }
 
     public int getTotalRating(){
