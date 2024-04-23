@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9387510e-3440-440d-93f3-a7a58025e0fc" name="Changes" comment="refatoração: retirando algumas redundâncias">
-      <change afterPath="$PROJECT_DIR$/src/screenmatch/main/MainWithSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screenmatch/models/OmdbTitle.java" afterDir="false" />
+    <list default="true" id="9387510e-3440-440d-93f3-a7a58025e0fc" name="Changes" comment="Implementação do buscador de filmes, utilizando uma API do OMDB e utilizando a biblioteca Gson.">
+      <change afterPath="$PROJECT_DIR$/src/screenmatch/exceptions/YearSizeException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screenMatch.iml" beforeDir="false" afterPath="$PROJECT_DIR$/screenMatch.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screenmatch/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenmatch/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screenmatch/main/MainWithSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenmatch/main/MainWithSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screenmatch/models/Entertainment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenmatch/models/Entertainment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,6 +63,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="screenmatch.excecao" />
       <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -163,7 +162,9 @@
       <workItem from="1713352663838" duration="271000" />
       <workItem from="1713439502576" duration="5997000" />
       <workItem from="1713480721085" duration="11000" />
-      <workItem from="1713805114733" duration="2127000" />
+      <workItem from="1713805114733" duration="3745000" />
+      <workItem from="1713820270598" duration="126000" />
+      <workItem from="1713871743400" duration="3380000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do gerenciador de filmes ScreenMatch">
       <option name="closed" value="true" />
@@ -301,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712322811788</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Implementação do buscador de filmes, utilizando uma API do OMDB e utilizando a biblioteca Gson.">
+      <option name="closed" value="true" />
+      <created>1713807606447</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1713807606447</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +334,7 @@
     <MESSAGE value="Organização de código e percorrendo listas com objetos de tipos diferentes." />
     <MESSAGE value="criação de métodos para organizar dados de uma lista de filmes" />
     <MESSAGE value="refatoração: retirando algumas redundâncias" />
-    <option name="LAST_COMMIT_MESSAGE" value="refatoração: retirando algumas redundâncias" />
+    <MESSAGE value="Implementação do buscador de filmes, utilizando uma API do OMDB e utilizando a biblioteca Gson." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementação do buscador de filmes, utilizando uma API do OMDB e utilizando a biblioteca Gson." />
   </component>
 </project>

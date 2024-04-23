@@ -1,17 +1,14 @@
 package screenmatch.models;
 
-import com.google.gson.annotations.SerializedName;
+import screenmatch.exceptions.YearSizeException;
 
 public class Entertainment implements Comparable<Entertainment>{
 
-    @SerializedName("Title")
     private String title;
-    @SerializedName("Year")
     protected int releaseYear;
     private boolean plainIncluded;
     private double rates;
     private int totalRating;
-    @SerializedName("Runtime")
     private int runtimeInMinutes;
 
 
@@ -21,6 +18,9 @@ public class Entertainment implements Comparable<Entertainment>{
 
     public Entertainment(OmdbTitle omdbTitle) {
         this.title = omdbTitle.title();
+        if(omdbTitle.year().length() > 4){
+            throw new YearSizeException("Não consegui converter, o ano tem mais de 4 caracteres");
+        }
         this.releaseYear = Integer.valueOf(omdbTitle.year());
         this.runtimeInMinutes = Integer.valueOf(omdbTitle.runtime().substring(0,3));
     }
