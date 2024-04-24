@@ -13,53 +13,68 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MainWithSearch {
     public static void main(String[] args) throws IOException, InterruptedException {
         Scanner reader = new Scanner(System.in);
+        String search = "";
+        List<Entertainment> titles = new ArrayList<>();
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .setPrettyPrinting()
+                .create();
 
-        System.out.print("Digite um filme para busca: ");
-        var searcher = reader.nextLine();
+        while(!search.equalsIgnoreCase("sair")) {
 
-        String endereco = "http://www.omdbapi.com/?t=%s&apikey=51329da0".formatted(searcher.replace(" ", "+"));
-        try {
-            HttpClient client = HttpClient.newHttpClient();
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(endereco))
-                    .build();
-            HttpResponse<String> response = client
-                    .send(request, HttpResponse.BodyHandlers.ofString());
+            System.out.print("Digite um filme para busca: ");
+            search = reader.nextLine();
 
-            String json = response.body();
-            System.out.println(json);
+            if(search.equalsIgnoreCase("sair")){
+                break;
+            }
 
-            Gson gson = new GsonBuilder()
-                    .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE).
-                    create();
+            String endereco = "http://www.omdbapi.com/?t=%s&apikey=51329da0".formatted(search.replace(" ", "+"));
+            try {
+                HttpClient client = HttpClient.newHttpClient();
+                HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create(endereco))
+                        .build();
+                HttpResponse<String> response = client
+                        .send(request, HttpResponse.BodyHandlers.ofString());
 
-            OmdbTitle omdbTitle = gson.fromJson(json, OmdbTitle.class);
-            System.out.println(omdbTitle);
-            Entertainment title = new Entertainment(omdbTitle);
+                String json = response.body();
+                System.out.println(json);
 
-        //try{
-            System.out.println("Título convertido");
-            System.out.println(title);
+                OmdbTitle omdbTitle = gson.fromJson(json, OmdbTitle.class);
+                System.out.println(omdbTitle);
+                Entertainment title = new Entertainment(omdbTitle);
 
-            FileWriter writer = new FileWriter("filmes.txt");
-            writer.write(title.toString());
-            writer.close();
+                System.out.println("Título convertido");
+                System.out.println(title);
 
-        } catch (NumberFormatException e ) {
-            System.out.println("Aconteceu um erro: ");
-            System.out.println(e.getMessage());
+                titles.add(title);
 
-        } catch (IllegalArgumentException e){
-            System.out.println("Parâmetro inválido, tente outra vez");
-            System.out.println(e.getMessage());
-        } catch (YearSizeException e){
-            System.out.println(e.getMessage());
+            } catch (NumberFormatException e) {
+                System.out.println("Aconteceu um erro: ");
+                System.out.println(e.getMessage());
+
+            } catch (IllegalArgumentException e) {
+                System.out.println("Parâmetro inválido, tente outra vez");
+                System.out.println(e.getMessage());
+            } catch (YearSizeException e) {
+                System.out.println(e.getMessage());
+            }
         }
+
+        System.out.println("Fechando o programa!");
+
+        FileWriter writer = new FileWriter("filmes.json");
+        writer.write(gson.toJson(titles));
+        writer.close();
+        
     }
 }
 
