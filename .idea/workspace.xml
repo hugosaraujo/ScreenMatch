@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9387510e-3440-440d-93f3-a7a58025e0fc" name="Changes" comment="Implementação do buscador de filmes, utilizando uma API do OMDB e utilizando a biblioteca Gson.">
-      <change afterPath="$PROJECT_DIR$/src/screenmatch/exceptions/YearSizeException.java" afterDir="false" />
+    <list default="true" id="9387510e-3440-440d-93f3-a7a58025e0fc" name="Changes" comment="Tratamento de eventuais erros na busca de filmes utilizando o imdb">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/screenmatch/main/MainWithSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenmatch/main/MainWithSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screenmatch/models/Entertainment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/screenmatch/models/Entertainment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +163,10 @@
       <workItem from="1713480721085" duration="11000" />
       <workItem from="1713805114733" duration="3745000" />
       <workItem from="1713820270598" duration="126000" />
-      <workItem from="1713871743400" duration="3380000" />
+      <workItem from="1713871743400" duration="3518000" />
+      <workItem from="1713876340686" duration="902000" />
+      <workItem from="1713910219099" duration="259000" />
+      <workItem from="1713959361925" duration="141000" />
     </task>
     <task id="LOCAL-00001" summary="Criação do gerenciador de filmes ScreenMatch">
       <option name="closed" value="true" />
@@ -310,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713807606447</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Tratamento de eventuais erros na busca de filmes utilizando o imdb">
+      <option name="closed" value="true" />
+      <created>1713875878148</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1713875878148</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,6 +345,7 @@
     <MESSAGE value="criação de métodos para organizar dados de uma lista de filmes" />
     <MESSAGE value="refatoração: retirando algumas redundâncias" />
     <MESSAGE value="Implementação do buscador de filmes, utilizando uma API do OMDB e utilizando a biblioteca Gson." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementação do buscador de filmes, utilizando uma API do OMDB e utilizando a biblioteca Gson." />
+    <MESSAGE value="Tratamento de eventuais erros na busca de filmes utilizando o imdb" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tratamento de eventuais erros na busca de filmes utilizando o imdb" />
   </component>
 </project>

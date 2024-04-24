@@ -7,6 +7,7 @@ import screenmatch.exceptions.YearSizeException;
 import screenmatch.models.Entertainment;
 import screenmatch.models.OmdbTitle;
 
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -16,12 +17,12 @@ import java.util.Scanner;
 
 public class MainWithSearch {
     public static void main(String[] args) throws IOException, InterruptedException {
-        Scanner leitura = new Scanner(System.in);
+        Scanner reader = new Scanner(System.in);
 
         System.out.print("Digite um filme para busca: ");
-        var busca = leitura.nextLine();
+        var searcher = reader.nextLine();
 
-        String endereco = "http://www.omdbapi.com/?t=%s&apikey=51329da0".formatted(busca.replace(" ", "+"));
+        String endereco = "http://www.omdbapi.com/?t=%s&apikey=51329da0".formatted(searcher.replace(" ", "+"));
         try {
             HttpClient client = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
@@ -45,6 +46,10 @@ public class MainWithSearch {
             System.out.println("Título convertido");
             System.out.println(title);
 
+            FileWriter writer = new FileWriter("filmes.txt");
+            writer.write(title.toString());
+            writer.close();
+
         } catch (NumberFormatException e ) {
             System.out.println("Aconteceu um erro: ");
             System.out.println(e.getMessage());
@@ -55,8 +60,6 @@ public class MainWithSearch {
         } catch (YearSizeException e){
             System.out.println(e.getMessage());
         }
-
-
     }
 }
 
